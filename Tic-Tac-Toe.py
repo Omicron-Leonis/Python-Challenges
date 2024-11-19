@@ -8,7 +8,7 @@ theBoard = {'7': ' ' , '8': ' ' , '9': ' ',
 board_keys = []
 
 for hey in theBoard:
-    board_keys.append(key)
+    board_keys.append(hey)
 
 '''We will have to print the updated board after every move in the game and thus we will make a function in which we'll define the printBoard function so that we cane asily print the board everytime by calling this function.'''
 
@@ -40,7 +40,7 @@ def game():
 
          # Now we will check if player X or 0 has won, for every move after 5 moves
         if count >= 5:
-           if theBoard['7'] == theBoard['8'] == theBoard['9'] != ' ': #across the top
+            if theBoard['7'] == theBoard['8'] == theBoard['9'] != ' ': #across the top
               printBoard(theBoard)
               print("\nGame Over.\n")
               print(" **** " + turn + "won.****")
@@ -84,15 +84,15 @@ def game():
 
 # if neither X nor 0 wins and the board is full, we'll decalre the result as 'tie'
 
-if count == 9:
-   print("\nGame Over.\n")
-   print("It's a tie!!")
+    if count == 9:
+      print("\nGame Over.\n")
+      print("It's a tie!!")
 
 # Now we have to change the player after  every move
-if turn == 'X':
-   turn = 'O'
-else:
-   turn = 'X'
+    if turn == 'X':
+       turn = 'O'
+    else:
+       turn = 'X'
 
 # Now we will ask if the player wants to restart the game or not
 restart = input("Do you want to play again?(y/n)")
